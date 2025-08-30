@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="{% static 'src/main.css' %}">
+    <link rel="stylesheet" href="{% static 'src/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'src/buttons.css' %}">
+    <link rel="stylesheet" href="{% static 'src/card.css' %}">
+    <link rel="stylesheet" href="{% static 'src/header.css' %}">
+    <link rel="stylesheet" href="{% static 'src/footer.css' %}">
+
+    <!-- scripts -->
+    <script src="{% static 'js/htmx.js' %}"></script>
+    <script src="{% static 'js/alpine.js' %}"></script>
+
+    <!-- boostrap -->
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container glass-body my-4 rounded-5 shadow-sm border-light">
+        {% include 'includes/header.html' %}
+        {% block content %}
+        {% endblock content %}
+        {% include 'includes/footer.html' %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+asgiref
+Django
+pytz
+sqlparse
+tzdata
+cloudinary
+django-cloudinary-storage
+pillow
+django-jazzmin
+python-dotenv
+django-bootstrap5
+django-summernote

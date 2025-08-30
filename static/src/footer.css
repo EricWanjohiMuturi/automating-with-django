@@ -1,0 +1,19 @@
+footer .nav-item a{
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+}
+
+footer .nav-item a:hover{
+    color: var(--alt-color) !important;
+    font-weight: 500;
+}
+
+footer p{
+    color: var(--secondary-color) !important;
+    font-weight: 500;
+}
+
+footer p:hover{
+    color: var(--alt-color) !important;
+    font-weight: 500;
+}
