@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row my-5">
+    <div class="d-flex justify-content-center align-items-center flex-column my-5">
+      <h1 class="text-center display-4 fw-bold">Import Data</h1>
+      <p class="text-center">import your records in bulk.</p>
+    </div>
+    <div class="justify-content-center align-items-center d-flex">
+        <form action="{% url 'import-data' %}" method="post" enctype="multipart/form-data" class="border p-5 rounded-5">
+            {% csrf_token %}
+            <div class="form-group mb-3">
+                <label for="file_path" class="fs-6">Upload CSV file</label>
+                <input type="file" name="file_path" class="form-control bg-transparent">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="model_name" class="fs-6">Select Databse Table</label>
+                <select name="model_name" class="form-control bg-transparent">
+                    <option value="" disabled selected> Select</option>
+                    <option value="">Demo Model</option>
+                </select>
+            </div>
+
+            <input type="submit" value="Input Data" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+:root {
+    --connect-blue: #1992ef;
+    --connect-dark-blue: #0476ce;
+}
+
+.btn.btn-primary{
+    background-color: var(--connect-blue);
+    border: none;
+}
+
+.btn.btn-primary:hover{
+    background-color: var(--connect-dark-blue);
+    transform: translateY(-2px);
+}

@@ -10,3 +10,7 @@ django-jazzmin
 python-dotenv
 django-bootstrap5
 django-summernote
+whitenoise
+gunicorn
+dj_database_url
+psycopg2-binary
