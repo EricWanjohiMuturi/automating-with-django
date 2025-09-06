@@ -11,8 +11,10 @@
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.53);
-    border-radius: 12px;
+    background: linear-gradient(182deg,rgba(255, 249, 235, 1) 0%, rgb(253, 245, 229) 0%, rgba(255, 250, 242, 1) 100%);
+    border-radius: 28px 28px 0 0;
     border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.178);
 }
 
 
