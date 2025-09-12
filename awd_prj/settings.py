@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     #custom apps
     'dataentry',
+    'uploads',
 
     #plugins
     'django_summernote',
@@ -139,12 +140,20 @@ STATICSTORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATIC_ROOT = BASE_DIR / "staticfiles"
 # Media files (User-uploaded content)
 MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR /'media'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS ={
+    messages.ERROR:"danger",
+    50:"critical",
+}
 
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)

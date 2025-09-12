@@ -1,7 +1,7 @@
 :root{
-    --primary-mimosa: #f2b949;
-    --secondary-mimosa: #f2d6a0;
-    --alt-mimosa: #f2e6c0;
+    --connect-blue: #1992ef;
+    --connect-dark-blue: #0476ce;
+    --alt-connect: #1992efad;
     --white: #ffffff;
     --dark: #000000;
     --greyish: #f5f5f5;    
@@ -20,12 +20,12 @@
 
 h1, h2{
     font-weight: 500 !important;
-    color: var(--secondary-color) !important;
+    color: var(--dark) !important;
 }
 
 h3, h4, h5, h6{
     font-weight: 400 !important;
-    color: var(--secondary-color) !important;
+    color: var(--dark) !important;
 }
 
 .span-text{
@@ -33,7 +33,7 @@ h3, h4, h5, h6{
 }
 
 p{
-  color: var(--secondary-color) !important;
+  color: var(--dark) !important;
 }
 
 body{
@@ -47,6 +47,7 @@ body{
     max-width: 1400px;
     margin: auto;
 }
+
 
 
 

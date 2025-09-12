@@ -1,0 +1,39 @@
+{% if messages %}
+<div 
+    x-data="{ show: true }"
+    x-init="setTimeout(() => show = false, 5000)"
+    class="position-fixed top-0 end-0 p-3"
+    style="z-index: 1100;"
+>
+    {% for message in messages %}
+    <div 
+        x-show="show"
+        x-transition:enter="transform transition ease-out duration-300"
+        x-transition:enter-start="translate-x-full opacity-0"
+        x-transition:enter-end="translate-x-0 opacity-100"
+        x-transition:leave="transform transition ease-in duration-300"
+        x-transition:leave-start="translate-x-0 opacity-100"
+        x-transition:leave-end="translate-x-full opacity-0"
+        class="toast align-items-center text-white 
+               {% if message.tags == 'success' %} bg-success 
+               {% elif message.tags == 'error' %} bg-danger 
+               {% else %} bg-primary {% endif %} 
+               border-0 show mb-2"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+    >
+        <div class="d-flex">
+            <div class="toast-body">
+                {{ message }}
+            </div>
+            <button 
+                type="button" 
+                class="btn-close btn-close-white me-2 m-auto" 
+                @click="show = false"
+            ></button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
