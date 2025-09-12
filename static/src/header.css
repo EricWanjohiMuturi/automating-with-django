@@ -1,7 +1,7 @@
 :root{
-    --primary-mimosa: #f2b949;
-    --secondary-mimosa: #f2d6a0;
-    --alt-mimosa: #f2e6c0;
+    --connect-blue: #1992ef;
+    --connect-dark-blue: #0476ce;
+    --alt-connect: #1992efad;
     --white: #ffffff;
     --dark: #000000;
     --greyish: #f5f5f5;    
@@ -24,7 +24,7 @@ nav .nav-link{
 }
 
 nav .nav-link:hover{
-    color: var(--primary-mimosa) !important;
+    color: var(--connect-blue) !important;
     transform: translateY(-2px);
     font-weight: 800;
     /* border-bottom: #C8D9E6 3px solid; */
